@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Car Simulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Car Selection Screen -->
+    <div id="car-selection-screen">
+        <h1>Select Your Car</h1>
+        <div class="car-options">
+            <div class="car-option" data-car-type="standard">
+                <div class="car-preview car-preview-standard"></div>
+                <h2>Standard</h2>
+                <div class="car-stats">
+                    <div class="stat">
+                        <span>Speed</span>
+                        <div class="stat-bar">
+                            <div class="stat-fill" style="width: 40%"></div>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <span>Acceleration</span>
+                        <div class="stat-bar">
+                            <div class="stat-fill" style="width: 45%"></div>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <span>Handling</span>
+                        <div class="stat-bar">
+                            <div class="stat-fill" style="width: 60%"></div>
+                        </div>
+                    </div>
+                </div>
+                <button class="select-btn">Select</button>
+            </div>
+
+            <div class="car-option" data-car-type="sport">
+                <div class="car-preview car-preview-sport"></div>
+                <h2>Sport</h2>
+                <div class="car-stats">
+                    <div class="stat">
+                        <span>Speed</span>
+                        <div class="stat-bar">
+                            <div class="stat-fill" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <span>Acceleration</span>
+                        <div class="stat-bar">
+                            <div class="stat-fill" style="width: 65%"></div>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <span>Handling</span>
+                        <div class="stat-bar">
+                            <div class="stat-fill" style="width: 55%"></div>
+                        </div>
+                    </div>
+                </div>
+                <button class="select-btn">Select</button>
+            </div>
+
+            <div class="car-option" data-car-type="super">
+                <div class="car-preview car-preview-super"></div>
+                <h2>Supercar</h2>
+                <div class="car-stats">
+                    <div class="stat">
+                        <span>Speed</span>
+                        <div class="stat-bar">
+                            <div class="stat-fill" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <span>Acceleration</span>
+                        <div class="stat-bar">
+                            <div class="stat-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <span>Handling</span>
+                        <div class="stat-bar">
+                            <div class="stat-fill" style="width: 40%"></div>
+                        </div>
+                    </div>
+                </div>
+                <button class="select-btn">Select</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game UI -->
+    <div id="game-ui" style="display: none;">
+        <div id="info">
+            <h1>Car Simulator</h1>
+            <div id="controls">
+                <p>Controls: WASD or Arrow Keys to drive</p>
+                <p>Space to brake</p>
+            </div>
+        </div>
+        
+        <div id="dashboard">
+            <div id="speedometer">
+                <div class="gauge">
+                    <div class="gauge-fill"></div>
+                </div>
+                <div class="value"><span id="speed">0</span> km/h</div>
+            </div>
+            <div id="drift-indicator">DRIFT</div>
+        </div>
+        
+        <div id="track-info">
+            <p>Main Road: Straight test track</p>
+            <p>Circular Track: Test your drifting skills!</p>
+        </div>
+    </div>
+    
+    <canvas id="game"></canvas>
+    
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html> 
